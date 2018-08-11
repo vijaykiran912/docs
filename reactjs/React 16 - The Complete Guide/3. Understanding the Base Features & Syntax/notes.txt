@@ -1,0 +1,26 @@
+Topic: 2. The Build Workflow		
+1. npm and yarn are the dependency tools
+2. use Bundler(recommended: Webpack). It not only does bundling of files but it does some pre-process work. Ex Babel+Presets can be hooked into webpack
+   and used for converting ES6&ES5 features to normal browser understadable components before bundling.
+
+Topic: 3. Using Create React App
+1. create-react-app is the officillay recommended tool to create react projects.   
+2. npm(nodes package manager) is the tool we get when we install nodejs. 
+
+Topic: 4. Understanding the Folder Structure
+
+Topic: 5. Understanding Component Basics
+1. react Component have render() which called by React to render html, listen to internet, call other services, etc.
+
+Topic: 6. Understanding JSX
+1. The code we write inside render() is not actually JS, its a syntactical sugar over JS which should be converted to JS at build time.
+2. Each element will be internally converted into React.createElement(), that's the reason we need to import React component.
+
+Topic: 7. JSX Restrictions
+1. In JSX we need to use className as attribute for elements instead of class attribute as 'class' is used as keyword to create custom Component. 
+2. There should be only one root element in a component. Simply you have to nest everything in one single root element we return.
+
+Topic: 8. Creating a Functional Component
+1. There are 2 ways we can create a Component
+	 a. By extending Component from 'react' package(This will eventually be converted into function )
+	 b. By creating a function itself.

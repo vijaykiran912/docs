@@ -1,0 +1,9 @@
+1. Command to start server
+	C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin>rabbitmq-service.bat start
+
+2. Command to stop server
+	C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.5\sbin>rabbitmq-service.bat stop
+
+	
+Username : admin
+Password : admin

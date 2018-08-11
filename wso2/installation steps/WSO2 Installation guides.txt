@@ -1,0 +1,31 @@
+Application Server 
+==================
+
+1) Modify offset in <AS_HOME>/repository/conf/carbon.xml if already running ESB server.
+
+To start server
+---------------
+1)Go to '<AS_HOME>\\bin' in command prompt.
+2)Run wso2server.bat 
+
+
+*******************************************************************************************************************
+
+ESB Axis Server
+===============
+
+To Start Axis server
+---------------------
+1)Go to '<ESB_OME>\\samples\axis2Server' in command prompt.
+2)Run axis2server.bat
+
+ 
+Carbon app deployment location
+-------------------------------
+1) C:\Users\vipothamse.COPART\Desktop\Documentation\wso2\wso2esb-5.0.0\repository\deployment\server\carbonapps
+2) C:\Users\vipothamse.COPART\Desktop\Documentation\wso2\wso2esb-5.0.0-11-nov-2017-windows\wso2esb-5.0.0\repository\deployment\server\carbonapps
+
+Mediator Jar location
+---------------------
+C:\Users\vipothamse.COPART\Desktop\Documentation\wso2\wso2esb-5.0.0\repository\components\lib
+

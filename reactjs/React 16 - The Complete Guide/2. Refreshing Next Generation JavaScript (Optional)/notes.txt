@@ -1,0 +1,30 @@
+Topic: 2. Understanding let and const
+1) Earlier we used 'var' for both variables and constants, but starting ES6 there is clear specification that we should use 'let' for variables and 
+'const' for constant values.
+
+Topic: 3. Arrow Functions
+1) Advantages of arrow function.
+	. Recudes the syntax
+	. Eliminates the issue with 'this' keyword inside function
+2) In arraow function, if it receives only one argument, we can ommit the paranthesis.
+
+Topic: 4. Exports and Imports
+1) There are default exports and named exports. For named exports we need to use curly brases.
+2) We can give alias using 'as' keyword.
+3) Special charctere * is used to import all the exports with alias, need to use alias.name to access the export
+
+Topic: 7. The Spread & Rest Operator
+1) Spread Operator
+    Used to split up array elements OR object properties
+	 Ex: const newArray = [...oldArray, 1, 5]
+	     const newObject = {...oldObject, newProp:5}
+2) Rest Operator
+    Used to merge a list of function arguments into an array
+     Ex: function sortArgs(...args){
+		   return args.sort();
+		}  
+
+Topic: 8. Destructuring
+1)Easily extract array elements or Object properties and store them in variables.
+	{name} = {'name':'Max', 'age': 28}
+	[a, b] = ['vijay','kiran']

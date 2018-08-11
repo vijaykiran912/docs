@@ -1,0 +1,7 @@
+Privacy connection error:
+
+Enter following one in the browser
+chrome://flags/#allow-insecure-localhost
+
+
+Using an OAuth base security token 260
