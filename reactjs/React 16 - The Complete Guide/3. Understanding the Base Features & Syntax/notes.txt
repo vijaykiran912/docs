@@ -24,3 +24,52 @@ Topic: 8. Creating a Functional Component
 1. There are 2 ways we can create a Component
 	 a. By extending Component from 'react' package(This will eventually be converted into function )
 	 b. By creating a function itself.
+	 
+Topic 11. Outputting Dynamic Content
+1. If there is something that should be treated as JS instead of normal text, we should enclose it in curly braces.
+
+Topic 12. Working with Props
+1. When using class-based componenet, we need to use this.props inside the render method to access props object.
+
+Topic 13. Understanding the Children Property
+1. children is the keyword reserved to represent anything(Could be plain text, custom component, ui & li tags, etc) between opening and closing tags of a component. 
+Using this we can not only send props but also the content dynamically from outside of a component.
+
+Topic 14. Understanding & Using State
+1. A special property called state(reserved word) is avaliable only inside a custom component which extends from Component.
+2. This is used to mamange the state internally.
+3. this keyword inside a componenet points to that class.
+4. If state changes, it will lead React to rerender(update) our DOM.
+
+Topic 16. Handling Events with Methods
+1. We should use onClick attribute instead of onclick when assigning event to a button, and we should not use paranthesis while calling the property refering the function.
+Ex: <button onClick={this.swithButtonHandler()}>Swith Button</button> //illegal
+	<button onClick={this.swithButtonHandler}>Swith Button</button> //legal
+  If used paranthesis as in step 1, swithButtonHandler() method will be called while rendering the DOM.
+  
+Topic 18. Manipulating the State
+1. this.state will only work in ES6 arrow functions.
+2. Don't mutate the state directly in React, it will not update the DOM, instead use setState() method implicitly provided by React when we extends Component.
+3. If state changes or props changes, React basically analysis the code it already rendered to the DOM and the code it would now render if it were to rerender everything, then it
+   updates the DOM where new state & props changes.
+
+Topic 19.  Functional (Stateless) vs class (Stateful) Components 
+1. Application state should not be changed in components, it would be diffult to handle if application grows. State should be changed only in Containers. Most of the components 
+should only receive inputs as props dynamically and will result in change in DOM.
+
+Topic 20.  Passing Method References Between Components
+1. We can pass method references as props to other components.
+2. bind method is used to bind 'this' reference from outside a function to 'this' that is inside a function. Alternatively we can use arraow function which resolves 'this'
+issue using ES6 
+
+Topic 21.  Adding Two Way Binding
+
+
+Topic 22.  Adding Styling with Stylesheets
+1. In JSX we need to use className instead of class attribute apply styling.
+
+Topic 23.  Working with Inline Styles
+1. In JSX, we can actullay design our styles in Javascript. css style properties have JSON representations. 
+	Ex: background-color in css, we cannot use '-' as key in JSON, so either use Camel case instead of '-' as backgroundColor or wrap in quotation marks.
+		const style = { 'background-color' : 'red' } OR const style = { backgroundColor : 'red' }
+2. Styling hover effect is pretty hard when we use inline style, this is one restriction already.
