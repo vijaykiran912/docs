@@ -1,0 +1,22 @@
+The Three States
+-----------------
+	.Git has three main states that your files can reside in: committed, modified, and staged. Committed means that the data is safely stored in your local database. Modified means that you have changed the file but have not committed it to your database yet. Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+
+. The Git directory is where Git stores the metadata and object database for your project.
+. The working directory is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.	
+. The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
+
+To setup your identity
+----------------------
+	$ git config --global user.name "John Doe"
+	$ git config --global user.email johndoe@example.com
+
+Your Editor
+-----------
+	$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+Getting Help
+------------
+	$ git help <verb>
+	$ git <verb> --help
+	$ man git-<verb>
