@@ -1,0 +1,30 @@
+In Chapter 1, we’re going to cover Version Control Systems (VCSs) and Git
+basics—no technical stuff, just what Git is, why it came about in a land full of
+VCSs, what sets it apart, and why so many people are using it. Then, we’ll explain
+how to download Git and set it up for the first time if you don’t already
+have it on your system.
+
+In Chapter 2, we will go over basic Git usage—how to use Git in the 80% of
+cases you’ll encounter most often. After reading this chapter, you should be
+able to clone a repository, see what has happened in the history of the project,
+modify files, and contribute changes. If the book spontaneously combusts at
+this point, you should already be pretty useful wielding Git in the time it takes
+you to go pick up another copy.
+
+Chapter 3 is about the branching model in Git, often described as Git’s killer
+feature. Here you’ll learn what truly sets Git apart from the pack. When you’re
+done, you may feel the need to spend a quiet moment pondering how you lived
+before Git branching was part of your life.
+
+Chapter 7 is about advanced Git commands. Here you will learn about topics
+like mastering the scary reset command, using binary search to identify
+bugs, editing history, revision selection in detail, and a lot more. This chapter
+will round out your knowledge of Git so that you are truly a master.
+
+Chapter 10 delves into the murky yet beautiful depths of Git internals. Now
+that you know all about Git and can wield it with power and grace, you can
+move on to discuss how Git stores its objects, what the object model is, details
+of packfiles, server protocols, and more. Throughout the book, we will refer to
+sections of this chapter in case you feel like diving deep at that point; but if you
+are like us and want to dive into the technical details, you may want to read
+Chapter 10 first. We leave that up to you.
