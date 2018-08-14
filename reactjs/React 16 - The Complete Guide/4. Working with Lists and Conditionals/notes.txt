@@ -1,0 +1,8 @@
+Topic 2.  Rendering Content Conditionally
+1. If we want to render content dynamically, we need to enclose it in {}, and in JSX we should use terinary expression(Normal if/else conditions will not work). That is we can only use normal simple statements not block statements.
+
+Topic 5.  Outputting Lists
+1. If the array returned by vanilla JS contains JSX, React pulls each element from array and renders to DOM.
+
+Topic 7.  Updating State Immutably
+1. Mutating the state managed by React leads to unpredicable behaviour in the App. Good practise is to create the copy of data before changing.
