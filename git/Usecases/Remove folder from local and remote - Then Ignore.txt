@@ -1,0 +1,19 @@
+Use case:
+
+1. Create maven project.
+2. Push complete project to remote.
+3. Observed that you don't require target folder.
+
+Query: How to remove target folder from remote and stop tracking it in subsequent commits.
+
+step 1: git rm --cached -r target
+'git rm' kicks the file off the stage entirely, so that it's not included in the next commit snapshot, thereby effectively deleting it. 
+
+Note: Refer commands.txt for more details on 'git rm'
+
+step 2: git commit -m "Removed target"
+step 3: git push
+
+Now to ignore /target/ folder from subsequent commits permanently, 
+
+step 4: Add /target/ in .gitignore file to ignore target folder when we stage by using 'git add' command.
