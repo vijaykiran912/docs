@@ -6,3 +6,6 @@ Topic 5.  Outputting Lists
 
 Topic 7.  Updating State Immutably
 1. Mutating the state managed by React leads to unpredicable behaviour in the App. Good practise is to create the copy of data before changing.
+
+Topic 8.  Lists & Keys
+1. Key prop is an important attribute when rendering lists of data. This key property helps the Reacts updates the list efficiently.
