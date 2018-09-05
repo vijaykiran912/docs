@@ -1,0 +1,7 @@
+Topic 1.  Cloud Configuration Intro
+1. Conifguration Architecture
+	. Microservice instance starts up and obtains configuration information
+	. Actual configuration resides in repository.
+	. Changes from develops are pushed through the build and deployment pipeline to the configuration repository.
+	. Applications with a configuration change are notified to refresh themselves.
+Note: Image available
