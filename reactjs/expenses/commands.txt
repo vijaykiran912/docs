@@ -1,0 +1,34 @@
+npm install --save react-router-dom
+
+npm install --save material-ui axios react-tap-event-plugin
+
+npm install --save redux react-redux
+
+npm install --save redux-logger redux-thunk
+
+npm install --save @material-ui/icons
+
+Bindings
+.react-redux — React
+
+Middleware
+.redux-thunk — The easiest way to write async action creators
+.redux-promise — FSA-compliant promise middleware
+.redux-axios-middleware — Redux middleware for fetching data with axios HTTP client
+.redux-observable — RxJS middleware for action side effects using "Epics"
+.redux-cycles — Handle Redux async actions using Cycle.js
+.redux-logger — Log every Redux action and the next state
+.redux-immutable-state-invariant — Warns about state mutations in development
+.redux-unhandled-action — Warns about actions that produced no state changes in development
+.redux-analytics — Analytics middleware for Redux
+.redux-gen — Generator middleware for Redux
+.redux-saga — An alternative side effect model for Redux apps
+.redux-action-tree — Composable Cerebral-style signals for Redux
+.apollo-client — A simple caching client for any GraphQL server and UI framework built on top of Redux
+
+Routing
+.react-router-redux — Ruthlessly simple bindings to keep React Router and Redux in sync
+.redial — Universal data fetching and route lifecycle management for React that works great with Redux
+.redux-little-router — A tiny router for Redux that lets the URL do the talking
+
+
