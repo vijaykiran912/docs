@@ -1,0 +1,53 @@
+Topic 2.  Outlining the Problem Set
+1. We can't use pseduo selector inside render() method. 
+2. Any style that is declared is global, there is a mechanisim to restrict this behaviour.
+3. We can add CSS dynamically.
+
+Topic 3. Setting Styles Dynamically
+1. We can modify inline style dynamiclly and also pass list of class names to className property dynamically.
+Ex: 
+ const style = {
+      backgroundColor: 'green',
+      /* 'background-color' : 'red', */
+      color : 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    }
+
+Modifying inline style dynamically.
+  style.backgroundColor = 'green'
+  
+Topic 4. Setting Class Names Dynamically
+
+Topic 5.  Adding and Using Radium
+1. Limitations of inline style is we can't apply hover style(pseudo selector).
+2. But it would be nice if we use Pseduo selector's and media queries in our normal js inline styles, but by default it is not possible. But can use third party library to add these functionality to application.
+3. npm install --save radium
+4. radium allows us to use inline styles and pseduo selectors in react app.
+5. Radium acts as a higher order component over our component.
+6. We can use Radium on functional component as well as on a component that extends Component.
+
+Topic 6.  Using Radium for Media Queries
+1. For media queries, keyframes to work , we need to wrap the application in the StyleRoot component.
+2. For pseduo selector's just wrapping component in Radium is enough.
+
+Topic 7.  Enabling & Using CSS Modules
+1. Scoping css to specific js file instead of making the style global, in order to do that we need to tweak the build configuration.
+2. npm eject is used to manage the configuration of application on our own.
+3. Webpack is used to pack our build files and optimises it. As as part of process, it also take care of CSS files.
+4. Add following properties in webpack.config.dev.js and webpack.config.prod.js after running 'npm run eject' command.
+   Need to modify 'css' module and add following keys in 'options' object
+	modules: true,
+	localIdentName: '[name]__[local]__[hash:base64:5]'
+5. With CSS modules, you can write normal CSS code and make sure, that it only applies to a given component.
+6. By the way, if you somehow also want to define a global (i.e. un-transformed)CSS class in such a .css  file, you can prefix the selector with :global.
+
+Example-   :global .Post { ... }
+ Now you can use className="Post" anywhere in your app and receive that styling.
+
+Topic 9.  Adding Pseudo Selectors
+1. CSS module works for nested classes as well. Any classes that are defined in css filed after enabling CSS module will apply to selectors and even sub selectors and are avalialbe in importing component.  
+
+Topic 10.  Working with Media Queries
