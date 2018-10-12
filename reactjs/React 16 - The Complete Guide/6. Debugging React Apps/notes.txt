@@ -1,0 +1,7 @@
+Topic 2.  Understanding Error Messages
+1. 
+
+Topic 3.  Finding Logical Errors by using Dev Tools & Sourcemaps
+
+Topic 5. Using Error Boundaries (React 16+)
+1. Error boundary is used to wrap code which might fail at runtime which we can't prevent then show custom error message and a fall back page. Dont over use them.
