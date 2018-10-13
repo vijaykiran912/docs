@@ -1,0 +1,90 @@
+Topic 2.  A Better Project Structure
+1. Container component should contains least JSX, however it is not necessary, it's optional. But for more focused components it's a good practise.
+
+Topic 3.  Splitting an App Into Components
+1. 
+
+Topic 4.  Comparing Stateless and Stateful Components
+1. You should try to create functional components as often as possible. Becuase these components have narraow focus and clear resposiblity, they are only about presenting something, and contains some logic too to rendering JSX dynamically.
+2. Class based components (components which extend Component) are the ones which manage state, we gonna have few places in application where state changes. The advantage of this approach is when the application grows, it is difficut to understand and manage the behaviour of the application.
+3. Class based components have a life cycle hooks where functional components doesn't have.	 
+4. Class component by default have props property, which can be accessed inside render() using this.props
+
+Topic 5.  Understanding the Component Lifecycle *****
+
+Topic 6.  Converting Stateless to Stateful Components *****
+
+Topic 7.  Component Creation Lifecycle in Action
+1. We can initialize the state in constructor.
+2. When the state changes render() method will be called.
+3. For a list of items, componentDidMount() on each item will be executed after completing render() on all the items (OR)
+   All the items should complete executing render() before calling componentDidMount() on each item.
+
+Topic 8. componentWillUnmount()
+1. There also is one Lifecycle method which gets executed (when implemented) right before a Component is removed from the DOM: componentWillUnmount() .
+
+Topic 9.  Component Updating Lifecycle Hooks *****
+1. Update can be triggered by the parent(changing props) or triggered by changing the state internally.
+2. We can increase the performance of the application by implementing shouldComponentUpdate(props), this method returns either true of false, this is the only method which returns a value. If we use it in a wrong way, application won't render the DOM even if there is change in props or state.
+
+Topic 10.  Component Updating Lifecycle in Action
+1. Instead of checking all props have changed or not in shouldComponentUpdate(), we can use PureComponent which inbuit has implemented shouldComponentUpdate() and validates all the props.
+2. So should we use PureComponent always?
+	No, you should only use, if you know updates might not be required. And there are components which are dependent on one or two props, and when ever an update is triggered on this component, you want to update it, because there might be PureComponents as parent in this component tree which prevents updating the child component anyways. So we need to place PureComponents strategicly higher in the tree.
+
+Topic 13.  How React Updates the App & Component Tree
+1. There is a difference between render() being called and real DOM change.
+
+Topic 14.  Understanding React's DOM Updating Strategy *****
+1. render() being called doest not render the real DOM immediately. React compares 'Old Virtual DOM' to 'Re-renderd Virtual DOM' which is much faster than the real DOM.
+2. If there is any differences then React will update "real" DOM, even then it will not update entirely, it only changes the places where differences are detected.
+3. If no differences are found, it Don't touch the real "DOM".
+
+Topic 15.  Returning Adjacent Elements (React 16+)
+1. The components which retrun array of elements doesn't need to have a root element.
+	Example : render(){
+        console.log("[Persons.js] Inside Render()");
+        return this.props.persons.map((person, index) => {
+                return <Person
+                  click={() => this.props.clicked(index)}
+                  name={person.name}
+                  age={person.age} 
+                  key={person.id} nameChanged={(event) => this.props.changed(event, person.id)}/>
+              });
+    }
+	
+	where as, for the elements sitting adjacent to each other we need to enclose in root element, but from React 16 we can return adjust elements in an array with key attribute for every element.
+	Example: return [
+            <p key="1" onClick={this.props.click}>I am {this.props.name}, {this.props.age} year's of age</p>,
+            <p key="2">{this.props.children}</p>,
+            <input key="3" type="text" onChange={this.props.nameChanged} value={this.props.name}/>
+            ]
+2. We can remove extra redundant html element(used for root element or to apply css for adjacent elements) by using higher order component(hoc).
+
+Topic 17.  Understanding Higher Order Components (HOCs)
+1. HOC is an component which has some logic that we wants to apply to group of components, and you don't want to add this logic in every component.
+
+Topic 19.  A Different Approach to HOCs
+
+Topic 21.  Using setState Correctly
+1. setState is the method that is executed by the react asynchronously, so if setState on the component is called from another place at the same time it will give incorrect results.
+2. If you are using this.state in setState(), we need to use function passed to setState() method.
+
+Use following Syntax:
+	this.setState((prevState,props) => {
+      return { showPersons: !doesShow,
+          toogleClicked : prevState.toogleClicked+1 }    
+    });
+	Instead of,
+	this.setState({ showPersons: !doesShow,
+       toogleClicked : this.state.toogleClicked+1
+    });
+	
+Topic 22.  Validating Props
+1. To validate types of incoming props, React provides a library called prop-types.
+	npm install save --prop-types
+
+Topic 24.  Using References (ref)
+1. We can have a special property called 'ref', inside ref we can get access to the element ref is placed as attribute.
+2. references are only available in stateful component.
+3. Use referene for focus & media queries, dont use it for dynamic styling and displaying.
