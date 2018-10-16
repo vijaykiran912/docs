@@ -83,6 +83,7 @@ Use following Syntax:
 Topic 22.  Validating Props
 1. To validate types of incoming props, React provides a library called prop-types.
 	npm install save --prop-types
+2. To use this the component must extends Component
 
 Topic 24.  Using References (ref)
 1. We can have a special property called 'ref', inside ref we can get access to the element ref is placed as attribute.

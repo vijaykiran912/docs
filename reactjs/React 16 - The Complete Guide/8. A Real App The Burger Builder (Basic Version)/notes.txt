@@ -1,0 +1,20 @@
+Topic 1.  Module Introduction
+
+Topic 2.  Planning an App in React - Core Steps
+	a. Component Tree/ Component Structure
+	b. Application State
+	c. Component vs Containers
+
+Topic 3.  Planning our App - Layout and Component Tree
+1. 
+
+Topic 4.  Planning the State
+
+Topic 5.  Setting up the Project
+cmd: npm run eject
+
+Add following in index.html, to use suctomized Open Sans font.
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+Topic 6.  Creating a Layout Component
+ 
