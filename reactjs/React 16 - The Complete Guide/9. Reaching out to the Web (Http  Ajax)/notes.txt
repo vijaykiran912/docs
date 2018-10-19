@@ -1,0 +1,43 @@
+Topic 13.  Adding Interceptors to Execute Code Globally
+
+1. Interceptors are used to add config to every outgoing request(Like Headers) and incoming request(Log the response).
+Example : 
+axios.interceptors.request.use(request => {
+    return request;
+}, error => {
+    return Promise.reject(error);
+});
+
+axios.interceptors.response.use(response => {
+    return response;
+}, error => {
+    return Promise.reject(error);
+});
+
+Topic 14. Removing Interceptors 
+Getting rid of one is also easy. Simply store the reference to the interceptor in a variable and call eject  with that reference as an argument, to remove it (more info: https://github.com/axios/axios#interceptors):
+
+Example :
+var myInterceptor = axios.interceptors.request.use(function () {/*...*/});
+axios.interceptors.request.eject(myInterceptor);
+
+Topic 15.  Setting a Default Global Configuration for Axios
+
+Example :
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+Topic 16.  Creating and Using Axios Instances
+Example: 
+import axios from 'axios';
+
+const instance = axios.create({
+    baseURL: 'https://jsonplaceholder.typicode.com'
+});
+
+instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';
+
+// instance.interceptors.request...
+
+export default instance;
